@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments & local secrets
+.venv/
+venv/
+ENV/
+.env
+.env.local
+*.bak
+
+# Local runtime state & SQLite databases
+data/
+*.db
+*.db-shm
+*.db-wal
+*.log
+
+# Test & tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# OS & Editor artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Keep templates & examples tracked
+!.env.example
+!docker/searxng/settings.yml

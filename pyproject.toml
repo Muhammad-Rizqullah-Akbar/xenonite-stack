@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xenonite-stack"
+version = "1.0.0"
+description = "Self-Hosted 4-Layer Autonomous Engineering MCP Stack & Anti-Churn Guardrails for AI Coding Agents"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Muhammad-Rizqullah-Akbar", email = "inirizqullahakbar@gmail.com" }]
+maintainers = [{ name = "Muhammad-Rizqullah-Akbar", email = "inirizqullahakbar@gmail.com" }]
+requires-python = ">=3.10"
+keywords = [
+    "mcp",
+    "model-context-protocol",
+    "antigravity",
+    "ai-coding-agent",
+    "qdrant",
+    "searxng",
+    "crawl4ai",
+    "ripgrep",
+    "ast-grep",
+    "self-hosted",
+    "anti-churn",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "mcp>=1.0.0,<2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Muhammad-Rizqullah-Akbar/xenonite-stack"
+Documentation = "https://github.com/Muhammad-Rizqullah-Akbar/xenonite-stack#readme"
+Repository = "https://github.com/Muhammad-Rizqullah-Akbar/xenonite-stack.git"
+Issues = "https://github.com/Muhammad-Rizqullah-Akbar/xenonite-stack/issues"
+Discussions = "https://github.com/Muhammad-Rizqullah-Akbar/xenonite-stack/discussions"
+
+[project.scripts]
+xenonite = "xenonite_stack.cli.app:main"
+xenonite-mcp = "xenonite_stack.mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["xenonite_stack*"]

@@ -1,0 +1,14 @@
+# Minimal self-hosted SearXNG configuration for Xenonite Stack Layer 2
+# Enables JSON API output required by `searxng_search` MCP tool.
+use_default_settings: true
+
+server:
+  limiter: false
+  image_proxy: false
+
+search:
+  safe_search: 0
+  autocomplete: ""
+  formats:
+    - html
+    - json

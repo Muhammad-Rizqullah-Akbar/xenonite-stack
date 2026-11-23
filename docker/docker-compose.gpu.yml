@@ -1,0 +1,14 @@
+# NVIDIA CUDA GPU override for HuggingFace TEI
+# Usage: xenonite docker up memory --gpu
+#   or : docker compose -f docker/docker-compose.yml -f docker/docker-compose.gpu.yml --profile memory up -d
+
+services:
+  tei:
+    image: ghcr.io/huggingface/text-embeddings-inference:1.9
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
